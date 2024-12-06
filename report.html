@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles */
+        .report-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .section-header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #e2f0cb;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        .report-content {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table th, .table td {
+            padding: 10px 15px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        .table th {
+            background-color: #f7fafc;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex justify-center my-10">
+        <div class="report-container max-w-3xl w-full">
+
+            <!-- Report Header -->
+            <header class="section-header">
+                <h1 class="text-3xl font-bold text-gray-800">Patient Medical Report</h1>
+                <p class="text-sm text-gray-500">Detailed health analysis and recommendations based on the latest medical data.</p>
+            </header>
+
+            <!-- Patient Information Section -->
+            <section class="section-header">
+                <h2 class="text-2xl font-semibold text-gray-700">Patient Information</h2>
+                <div class="grid grid-cols-2 gap-6 mt-4">
+                    <div>
+                        <p class="text-lg text-gray-600"><strong>Name:</strong> John Doe</p>
+                        <p class="text-lg text-gray-600"><strong>Age:</strong> 45</p>
+                        <p class="text-lg text-gray-600"><strong>Gender:</strong> Male</p>
+                    </div>
+                    <div>
+                        <p class="text-lg text-gray-600"><strong>Height:</strong> 5'9"</p>
+                        <p class="text-lg text-gray-600"><strong>Weight:</strong> 75 kg</p>
+                        <p class="text-lg text-gray-600"><strong>Blood Type:</strong> O+</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Status Section -->
+            <section class="section-header">
+                <h2 class="text-2xl font-semibold text-gray-700">Health Status</h2>
+                <div class="report-content">
+                    <p class="text-lg text-gray-700">Based on the latest health check-up, here is the current status of your health:</p>
+                    <ul class="list-disc pl-6 mt-4 text-gray-700">
+                        <li class="mt-2">Heart Rate: <span class="highlight">Normal (72 bpm)</span></li>
+                        <li class="mt-2">Blood Pressure: <span class="highlight">High (150/95 mmHg)</span></li>
+                        <li class="mt-2">Cholesterol Level: <span class="highlight">High (240 mg/dL)</span></li>
+                        <li class="mt-2">Blood Sugar: <span class="highlight">Normal (90 mg/dL)</span></li>
+                        <li class="mt-2">Ejection Fraction: <span class="highlight">Good (55%)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Recommendations Section -->
+            <section class="section-header">
+                <h2 class="text-2xl font-semibold text-gray-700">Recommendations</h2>
+                <div class="report-content">
+                    <h3 class="text-xl font-semibold text-gray-700">Dietary Advice:</h3>
+                    <p class="text-gray-700 mt-2">We recommend a low-sodium, low-fat diet to improve your heart health and manage blood pressure and cholesterol levels. Foods high in potassium and magnesium, such as bananas and leafy greens, can help reduce hypertension.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mt-6">Exercise Routine:</h3>
+                    <p class="text-gray-700 mt-2">A daily 30-minute walk or mild cardiovascular exercises (such as cycling or swimming) can help improve heart health and manage blood pressure. Avoid strenuous physical activities until advised by your doctor.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mt-6">Treatment Duration:</h3>
+                    <p class="text-gray-700 mt-2">The treatment plan will span over the next 6 months, including regular follow-up visits, blood tests, and lifestyle modifications. Continued monitoring of your blood pressure and cholesterol levels is critical.</p>
+                </div>
+            </section>
+
+            <!-- Cost-Efficiency Section -->
+            <section class="section-header">
+                <h2 class="text-2xl font-semibold text-gray-700">Cost-Efficiency Analysis</h2>
+                <div class="report-content">
+                    <p class="text-gray-700">The most cost-efficient treatment method would involve regular doctor visits for checkups, along with dietary and lifestyle changes. Medication can be considered if necessary, but the initial steps are focused on non-pharmacological solutions.</p>
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="section-header">
+                <h2 class="text-2xl font-semibold text-gray-700">Summary</h2>
+                <div class="report-content">
+                    <p class="text-lg text-gray-700">You are encouraged to make dietary changes and follow the recommended exercise plan. Regular checkups will help keep track of your heart health and ensure that the prescribed treatment plan is effective.</p>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-between mt-8">
+                <button class="btn-primary" onclick="window.print()">Download Report</button>
+                <button class="btn-primary">Contact Doctor</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
